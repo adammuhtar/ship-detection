@@ -1,0 +1,10 @@
+name: ship-classifier-cnn
+services:
+  ship-classifier-cnn:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5001:5000"
+    volumes:
+      - .:/app

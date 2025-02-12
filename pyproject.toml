@@ -1,24 +1,63 @@
-[tool.poetry]
-name = "ship-classifier-cnn"
-version = "0.1.0"
+[project]
+name = "ship-detection"
+dynamic = ["version"]
+authors = [
+    { name = "Adam Muhtar", email = "adam.muhtar23@imperial.ac.uk" },
+]
 description = "Convolutional neural network for binary classification of aerial satellite images, determining whether a given contains a ship or not."
-authors = ["Adam Muhtar <adam.muhtar23@imperial.ac.uk>"]
-license = ""
 readme = "README.md"
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "fastapi>=0.115.8",
+    "huggingface-hub>=0.28.1",
+    "matplotlib>=3.10.0",
+    "numpy>=2.2.2",
+    "pillow>=11.1.0",
+    "python-multipart>=0.0.20",
+    "structlog>=25.1.0",
+    "torch>=2.6.0",
+    "torchvision>=0.21.0",
+    "uvicorn>=0.34.0",
+]
 
-[tool.poetry.dependencies]
-python = ">=3.10,<3.13"
-fastapi = "^0.115.6"
-huggingface-hub = "^0.27.0"
-ipykernel = "^6.29.5"
-matplotlib = "^3.10.0"
-numpy = "^2.2.1"
-Pillow = "^11.0.0"
-structlog = "^24.4.0"
-torch = "^2.5.1"
-torchvision = "^0.20.1"
-
+[dependency-groups]
+dev = [
+    "ipykernel>=6.29.5",
+    "pip>=25.0.1",
+    "ruff>=0.9.6",
+]
 
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["ship_detection"]
+namespaces = false
+
+[tool.setuptools.dynamic]
+version = {attr = "ship_detection.__version__"}
+
+[tool.ruff.lint]
+select = [
+    "ERA001",   # no commented out code
+    "FAST",     # fastapi linting
+    "F401",     # unused imports
+    "I",        # imports should be ordered
+    "N",        # pep8 naming conventions
+    "S",        # flake-8 bandit security checks
+    "SIM"       # flake-8 simplification checks
+]
+
+[tool.ruff.lint.per-file-ignores]
+"*.ipynb" = [
+    "T201",     # allow print statements in notebooks
+    "I001",     # allow unsorted imports in notebooks
+]
+
+[tool.ruff.format]
+quote-style = "double"
+skip-magic-trailing-comma = true
+line-ending = "auto"
+docstring-code-format = true

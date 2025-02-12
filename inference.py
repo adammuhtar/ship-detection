@@ -11,11 +11,13 @@ import argparse
 from pathlib import Path
 
 # Local application imports
-from ship_detection import load_model_from_hf, run_inference
+from ship_detection import load_model_from_hf, run_inference, structlog_logger
+
+# Configure logging
+logger = structlog_logger()
 
 def main(image_path: str , model_filename: str) -> None:
-    """
-    Run ship classification inference on a test image.
+    """Run ship classification inference on a test image.
     
     Args:
         image_path (`str`): Path to the test image.
@@ -43,13 +45,13 @@ if __name__ == "__main__":
         formatter_class=argparse.ArgumentDefaultsHelpFormatter
     )
     parser.add_argument(
-        "--image_path", 
+        "--image-path", 
         type=str,
         default="data/sfbay_1.png",
         help="Path to the image."
     )
     parser.add_argument(
-        "--model_filename", 
+        "--model-filename", 
         type=str, 
         default="shipclassifier4convnet.pt", 
         help="ShipClassifierConvNet model to run inference."

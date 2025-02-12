@@ -1,0 +1,16 @@
+# Exclude everything
+**
+
+# Include Dockerfile and docker-compose for reference
+!Dockerfile
+!docker-compose.yml
+
+# Include src directory
+!src/ship_detection/**
+
+# Include all Python files
+!**/*.py
+
+# Include Python requirements
+!pyproject.toml
+!uv.lock
