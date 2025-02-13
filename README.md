@@ -17,7 +17,7 @@ The repo contains code to train and run CNN models to detect the presence of shi
 * [full_report.pdf](https://github.com/adammuhtar/ship-detection/blob/main/full_report.pdf): The main project report
 * [full_notebook.ipynb](https://github.com/adammuhtar/ship-detection/blob/main/notebooks/full_notebook.ipynb): The Jupyter notebook to reproduce the model training and inference.
 
-We use the [MASATI-v2](https://www.iuii.ua.es/datasets/masati/) (MAritime SATellite Imagery) dataset from [Gallego et al. (2018)](https://www.mdpi.com/2072-4292/10/4/511) to train our models, which can be obtained for free for non-profit research or educational purposes at [https://www.iuii.ua.es/datasets/masati/](https://www.iuii.ua.es/datasets/masati/). The dataset attached with this project is only a subset of the full dataset (i.e. the first 37 images of each sub-folder) for testing purposes only, to ensure compliance with the 100MB upload limit of the assignment.  We recommend that the unzipped [MASATI-v2](https://www.iuii.ua.es/datasets/masati/) dataset be stored inside the `data` directory for consistency of code (see directory structure).
+We use the [MASATI-v2](https://www.iuii.ua.es/datasets/masati/) (MAritime SATellite Imagery) dataset from [Gallego et al. (2018)](https://www.mdpi.com/2072-4292/10/4/511) to train our models, which can be obtained for free for non-profit research or educational purposes at [https://www.iuii.ua.es/datasets/masati/](https://www.iuii.ua.es/datasets/masati/). We recommend that the unzipped [MASATI-v2](https://www.iuii.ua.es/datasets/masati/) dataset be stored inside the `data` directory for consistency of code (see directory structure).
 
 ## Directory Structure
 ```plaintext
