@@ -89,11 +89,16 @@ uv pip install .
 
 Once installed, the command line inference could be run via:
 ```bash
-uv run python inference.py --image-path /path/to/image.png
+uv run python inference.py --image-path /path/to/image.png --model shipclassifier4convnet.pt --device=cpu
+```
+
+The helper message can be accessed via the following message:
+```bash
+uv run python inference.py --help
 ```
 
 #### Installation via standard Python build
-The package could also :
+The package could also be built using the standard Python build package, via the following commands:
 ```bash
 git clone https://github.com/adammuhtar/ship-detection.git
 cd ship-detection
@@ -106,5 +111,10 @@ python -m install .
 
 Once installed, the command line inference could be run via:
 ```bash
-python inference.py --image-path /path/to/image.png
+python inference.py --image-path /path/to/image.png --model shipclassifier4convnet.pt --device=cpu
+```
+
+The helper message can be accessed via the following message:
+```bash
+python inference.py --help
 ```
