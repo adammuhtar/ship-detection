@@ -11,7 +11,7 @@ dependencies = [
     "fastapi>=0.115.8",
     "huggingface-hub>=0.28.1",
     "matplotlib>=3.10.0",
-    "numpy>=2.2.2",
+    "numpy>=2.2.3",
     "pillow>=11.1.0",
     "python-multipart>=0.0.20",
     "structlog>=25.1.0",
@@ -39,15 +39,34 @@ namespaces = false
 [tool.setuptools.dynamic]
 version = {attr = "ship_detection.__version__"}
 
+[tool.uv.sources]
+torch = [
+    { index = "pytorch-cpu", marker = "sys_platform == 'linux' or sys_platform == 'win32'"},
+]
+torchvision = [
+    { index = "pytorch-cpu", marker = "sys_platform == 'linux' or sys_platform == 'win32'"},
+]
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
 [tool.ruff.lint]
 select = [
+    "F",        # Pyflakes linter
+    "E", "W",   # pycodestyle linter
+    "I",        # isort
+    "N",        # PEP 8 naming conventions
+    "D",        # pydocstyle linter
+    "S",        # flake8 bandit security checks
+    "COM",      # flake8 commas
+    "SIM",      # flake8 simplification suggestions
     "ERA001",   # no commented out code
-    "FAST",     # fastapi linting
-    "F401",     # unused imports
-    "I",        # imports should be ordered
-    "N",        # pep8 naming conventions
-    "S",        # flake-8 bandit security checks
-    "SIM"       # flake-8 simplification checks
+    "TRY",      # tryceratops linter
+    "NPY",      # NumPy-specific rules
+    "FAST",     # FastAPI linting
+    "RUF",     # Ruff-specific rules
 ]
 
 [tool.ruff.lint.per-file-ignores]
