@@ -14,7 +14,7 @@ PyTorch code to train and run CNN models to detect presence of ships within sate
 
 ## Overview
 The repo contains code to train and run CNN models to detect the presence of ships within satellite imagery, as part of the final project for Imperial College London's MSc MLDS Unstructured Data Analysis (MATH70103) module. The main files of the repo for the purposes of the module are:
-* [full-report.pdf](https://github.com/adammuhtar/ship-detection/blob/main/full-report.pdf): The main project report
+* [final-report.pdf](https://github.com/adammuhtar/ship-detection/blob/main/final-report.pdf): The main project report
 * [full-notebook.ipynb](https://github.com/adammuhtar/ship-detection/blob/main/notebooks/full-notebook.ipynb): The Jupyter notebook to reproduce the model training and inference.
 
 We use the [MASATI-v2](https://www.iuii.ua.es/datasets/masati/) (MAritime SATellite Imagery) dataset from [Gallego et al. (2018)](https://www.mdpi.com/2072-4292/10/4/511) to train our models, which can be obtained for free for non-profit research or educational purposes at [https://www.iuii.ua.es/datasets/masati/](https://www.iuii.ua.es/datasets/masati/). We recommend that the unzipped [MASATI-v2](https://www.iuii.ua.es/datasets/masati/) dataset be stored inside the `data` directory for consistency of code (see directory structure).
