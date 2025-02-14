@@ -2,7 +2,7 @@
 [![Python 3.12](https://img.shields.io/badge/Python-3.10%20%7C%203.11%20%7C%203.12-blue?&logo=Python&logoColor=white%5BPython)](https://www.python.org/downloads/release/python-3129)
 [![PyTorch 2.6.0](https://img.shields.io/badge/PyTorch-2.6.0-red?&logo=PyTorch&logoColor=white%5BPyTorch)](https://pytorch.org/get-started/locally/)
 [![Hugging Face](https://img.shields.io/badge/🤗%20Hugging%20Face-ShipClassifierConvNet-%23FFCC4D)](https://huggingface.co/AdamMuhtar/ShipClassifierConvNet)
-<a href="https://colab.research.google.com/github/adammuhtar/ship-detection/blob/main/notebooks/full_notebook.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+<a href="https://colab.research.google.com/github/adammuhtar/ship-detection/blob/main/notebooks/full-notebook.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 
 # Convolutional Neural Network (CNN) to Classify Presence of Ships within Satellite Images
 PyTorch code to train and run CNN models to detect presence of ships within satellite imagery.
@@ -14,8 +14,8 @@ PyTorch code to train and run CNN models to detect presence of ships within sate
 
 ## Overview
 The repo contains code to train and run CNN models to detect the presence of ships within satellite imagery, as part of the final project for Imperial College London's MSc MLDS Unstructured Data Analysis (MATH70103) module. The main files of the repo for the purposes of the module are:
-* [full_report.pdf](https://github.com/adammuhtar/ship-detection/blob/main/full_report.pdf): The main project report
-* [full_notebook.ipynb](https://github.com/adammuhtar/ship-detection/blob/main/notebooks/full_notebook.ipynb): The Jupyter notebook to reproduce the model training and inference.
+* [full-report.pdf](https://github.com/adammuhtar/ship-detection/blob/main/full-report.pdf): The main project report
+* [full-notebook.ipynb](https://github.com/adammuhtar/ship-detection/blob/main/notebooks/full-notebook.ipynb): The Jupyter notebook to reproduce the model training and inference.
 
 We use the [MASATI-v2](https://www.iuii.ua.es/datasets/masati/) (MAritime SATellite Imagery) dataset from [Gallego et al. (2018)](https://www.mdpi.com/2072-4292/10/4/511) to train our models, which can be obtained for free for non-profit research or educational purposes at [https://www.iuii.ua.es/datasets/masati/](https://www.iuii.ua.es/datasets/masati/). We recommend that the unzipped [MASATI-v2](https://www.iuii.ua.es/datasets/masati/) dataset be stored inside the `data` directory for consistency of code (see directory structure).
 
@@ -26,7 +26,7 @@ ship-detection/
 │   ├── MASATI-v2-100mb/ [not provided]
 │   └── sfbay_1.png
 ├── notebooks/
-│   ├── full_notebook.ipynb
+│   ├── full-notebook.ipynb
 │   └── test-inference.ipynb
 ├── src/
 │   └── ship_classifier/
@@ -40,7 +40,7 @@ ship-detection/
 ├── app.py
 ├── docker-compose.yml
 ├── Dockerfile
-├── final_report.pdf
+├── final-report.pdf
 ├── inference.py
 ├── pyproject.toml
 ├── README.md
@@ -64,7 +64,7 @@ which returns
 {"status":"ok"}
 ```
 
-1. Make an inference by sending a local image to the endpoint:
+3. Make an inference by sending a local image to the endpoint:
 ```bash
 curl -X POST -F "file=@/path/to/image.png" http://localhost:5001/predict
 ```
@@ -81,7 +81,6 @@ To install the required packages, clone the repo and install the required depend
 ```bash
 git clone https://github.com/adammuhtar/ship-detection.git
 cd ship-detection
-uv venv --python 3.12
 uv sync --frozen
 uv build
 uv pip install .
@@ -92,7 +91,7 @@ Once installed, the command line inference could be run via:
 uv run python inference.py --image-path /path/to/image.png --model shipclassifier4convnet.pt --device=cpu
 ```
 
-The helper message can be accessed via the following message:
+The helper message can be accessed via the following command:
 ```bash
 uv run python inference.py --help
 ```
@@ -114,7 +113,7 @@ Once installed, the command line inference could be run via:
 python inference.py --image-path /path/to/image.png --model shipclassifier4convnet.pt --device=cpu
 ```
 
-The helper message can be accessed via the following message:
+The helper message can be accessed via the following command:
 ```bash
 python inference.py --help
 ```
