@@ -66,7 +66,7 @@ select = [
     "TRY",      # tryceratops linter
     "NPY",      # NumPy-specific rules
     "FAST",     # FastAPI linting
-    "RUF",     # Ruff-specific rules
+    "RUF",      # Ruff-specific rules
 ]
 
 [tool.ruff.lint.per-file-ignores]
