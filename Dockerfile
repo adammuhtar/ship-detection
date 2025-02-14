@@ -15,10 +15,11 @@ ENV PATH="/root/.local/bin:${PATH}" \
     PYTHONDONTWRITEBYTECODE=1 \
     UV_COMPILE_BYTECODE=1 \
     UV_LINK_MODE=copy \
+    UV_CACHE_DIR=/opt/uv-cache/ \
     WORKERS=1 \
     THREADS=8 \
     JSON_LOGS="true"
-
+    
 # Set the working directory in the container
 WORKDIR /app
 
@@ -30,10 +31,10 @@ COPY pyproject.toml uv.lock ./
 COPY src ./src
 
 # Install dependencies
-RUN --mount=type=cache,target=/root/.cache/uv \
+RUN --mount=type=cache,target=/root/opt/uv-cache/ \
     --mount=type=bind,source=uv.lock,target=uv.lock \
     --mount=type=bind,source=pyproject.toml,target=pyproject.toml \
-    uv sync --frozen --no-install-project --no-editable --no-dev
+    uv sync --frozen --compile-bytecode --no-install-project --no-editable --no-dev
 
 # Build and install the package
 RUN uv build && uv pip install .
