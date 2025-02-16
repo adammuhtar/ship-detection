@@ -1,5 +1,5 @@
 [![uv](https://img.shields.io/badge/uv-%2350005b?&logo=uv&labelColor=%235A5A5A)](https://docs.astral.sh/uv/getting-started/installation/)
-[![Python 3.12](https://img.shields.io/badge/Python-3.10%20%7C%203.11%20%7C%203.12-blue?&logo=Python&logoColor=white%5BPython)](https://www.python.org/downloads/release/python-3129)
+[![Python 3.13](https://img.shields.io/badge/Python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.13-blue?&logo=Python&logoColor=white%5BPython)](https://www.python.org/downloads/release/python-3132)
 [![PyTorch 2.6.0](https://img.shields.io/badge/PyTorch-2.6.0-red?&logo=PyTorch&logoColor=white%5BPyTorch)](https://pytorch.org/get-started/locally/)
 [![Hugging Face](https://img.shields.io/badge/🤗%20Hugging%20Face-ShipClassifierConvNet-%23FFCC4D)](https://huggingface.co/AdamMuhtar/ShipClassifierConvNet)
 <a href="https://colab.research.google.com/github/adammuhtar/ship-detection/blob/main/notebooks/full-notebook.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
@@ -74,7 +74,7 @@ which returns an output such as this:
 ```
 
 ### Running without Docker
-This code was developed using [Python 3.12.9](https://www.python.org/downloads/release/python-3129/), and compatible with Python versions 3.11 and 3.10. We utilise [uv](https://docs.astral.sh/uv/) to manage Python packages and dependencies for ease-of-use and consistent deployment.
+This code was developed using [Python 3.13.2](https://www.python.org/downloads/release/python-3132/), and compatible with Python versions 3.12, 3.11, and 3.10. We utilise [uv](https://docs.astral.sh/uv/) to manage Python packages and dependencies for ease-of-use and consistent deployment.
 
 #### Installation via [`uv`](https://docs.astral.sh/uv/)
 To install the required packages, clone the repo and install the required dependencies as follows:

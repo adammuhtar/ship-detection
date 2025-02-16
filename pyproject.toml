@@ -6,7 +6,7 @@ authors = [
 ]
 description = "Convolutional neural network for binary classification of aerial satellite images, determining whether a given contains a ship or not."
 readme = "README.md"
-requires-python = ">=3.10,<3.13"
+requires-python = ">=3.10"
 dependencies = [
     "fastapi>=0.115.8",
     "huggingface-hub>=0.28.1",
