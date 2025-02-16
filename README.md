@@ -1,5 +1,6 @@
+[![Visual Studio Code](https://custom-icon-badges.demolab.com/badge/Visual%20Studio%20Code-007ACC?logo=vscode-new&labelColor=%235A5A5A)](https://code.visualstudio.com)
 [![uv](https://img.shields.io/badge/uv-%2350005b?&logo=uv&labelColor=%235A5A5A)](https://docs.astral.sh/uv/getting-started/installation/)
-[![Python 3.13](https://img.shields.io/badge/Python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.13-blue?&logo=Python&logoColor=white%5BPython)](https://www.python.org/downloads/release/python-3132)
+[![Python 3.13](https://img.shields.io/badge/Python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.13-%234584b6?&logo=Python&logoColor=white%5BPython)](https://www.python.org/downloads/release/python-3132)
 [![PyTorch 2.6.0](https://img.shields.io/badge/PyTorch-2.6.0-red?&logo=PyTorch&logoColor=white%5BPyTorch)](https://pytorch.org/get-started/locally/)
 [![Hugging Face](https://img.shields.io/badge/🤗%20Hugging%20Face-ShipClassifierConvNet-%23FFCC4D)](https://huggingface.co/AdamMuhtar/ShipClassifierConvNet)
 <a href="https://colab.research.google.com/github/adammuhtar/ship-detection/blob/main/notebooks/full-notebook.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
