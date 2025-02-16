@@ -29,7 +29,7 @@ ship-detection/
 │   ├── full-notebook.ipynb
 │   └── test-inference.ipynb
 ├── src/
-│   └── ship_classifier/
+│   └── ship_detection/
 │       ├── __init__.py
 │       ├── loader.py
 │       ├── logger.py
